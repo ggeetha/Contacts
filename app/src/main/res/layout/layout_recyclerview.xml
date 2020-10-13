@@ -51,7 +51,7 @@
                     android:ellipsize="marquee"
                     android:singleLine="true"
                     android:text="Description"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceSmall"/>
         </LinearLayout>
 
         </LinearLayout>
