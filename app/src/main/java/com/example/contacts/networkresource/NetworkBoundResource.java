@@ -18,11 +18,6 @@ public abstract class NetworkBoundResource <LocalType, LocalView,  RemoteType> {
         this.run(emitter);
     }
 
-    public NetworkBoundResource()
-    {
-
-    }
-
     private void run(FlowableEmitter<Resource<LocalView>> emitter)
     {
         Log.i(LOG_TAG, "NBResource called");
@@ -34,12 +29,9 @@ public abstract class NetworkBoundResource <LocalType, LocalView,  RemoteType> {
                     .observeOn(Schedulers.io())
                     .subscribe(localTypeData -> {
                         firstDataDisposable.dispose();
-                        //Log.i(LOG_TAG, "shouldFetch called: " + localTypeData);
                         saveCallResult(localTypeData);
                         getLocal().map(Resource::success).subscribe(emitter::onNext);
                     }, throwable -> {
-                        //Log.e("NetworkBoundResource", throwable.getLocalizedMessage(), throwable);
-                        //firstDataDisposable.dispose();
                         emitter.onError(throwable);
                     });
         }

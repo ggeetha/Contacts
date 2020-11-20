@@ -1,10 +1,8 @@
 package com.example.contacts.repository;
 
-import android.util.Log;
 import com.example.contacts.api.RestService;
 import com.example.contacts.localdb.AppDatabase;
 import com.example.contacts.model.USerDetailsPojo;
-import com.example.contacts.model.UserResponse;
 import com.example.contacts.networkresource.NetworkBoundResource;
 import com.example.contacts.utils.ConfigConstants;
 import com.example.contacts.vo.Resource;
@@ -31,7 +29,6 @@ public class UserRepository {
 
             @Override
             public Single<List<USerDetailsPojo>> getRemote() {
-                Log.e("Repo", "getRemote: page num"+ConfigConstants.PAGE_NUMBER);
                 return restService.getUsersData(ConfigConstants.PAGE_NUMBER).flatMap(userResponse -> Single.just(userResponse.getData()));
             }
 

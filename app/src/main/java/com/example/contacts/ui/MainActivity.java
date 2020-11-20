@@ -5,10 +5,8 @@ import android.util.Log;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.example.contacts.App;
 import com.example.contacts.model.USerDetailsPojo;
 import com.example.contacts.R;
@@ -21,8 +19,6 @@ import com.example.contacts.vo.Status;
 
 import javax.inject.Inject;
 import java.util.List;
-
-import static com.example.contacts.ui.adapter.PaginationListener.PAGE_START;
 
 public class MainActivity extends AppCompatActivity {
 

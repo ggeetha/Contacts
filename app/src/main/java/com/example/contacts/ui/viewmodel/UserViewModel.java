@@ -2,8 +2,6 @@ package com.example.contacts.ui.viewmodel;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-import com.example.contacts.api.RestService;
-import com.example.contacts.localdb.AppDatabase;
 import com.example.contacts.model.USerDetailsPojo;
 import com.example.contacts.repository.UserRepository;
 import com.example.contacts.vo.Resource;
